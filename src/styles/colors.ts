@@ -1,0 +1,16 @@
+export default {
+  colors: {
+    primary: {
+      darkBlue: "hsl(243, 87%, 12%)",
+      dessaturatedBlue: "hsl(238, 22%, 44%)",
+    },
+    accent: {
+      brightBlue: "hsl(224, 93%, 58%)",
+      moderateCyan: "hsl(170, 45%, 43%)",
+    },
+    neutral: {
+      lightGrayishBlue: "hsl(240, 75%, 98%)",
+      lightGray: "hsl(0, 0%, 75%)",
+    },
+  },
+};
