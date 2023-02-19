@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import colors from "../styles/colors";
 
-export const Center = styled.div`
+type Props = {
+  mt?: string;
+};
+
+export const Center = styled.div<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,10 +13,10 @@ export const Center = styled.div`
 `;
 
 export const Container = styled(Center)`
-  margin-top: 73px;
+  margin-top: ${(props) => props.mt};
 
   & > .container-text {
-    margin-top: 40px;
+    margin-top: 35px;
     width: 90%;
 
     text-align: center;
@@ -69,9 +73,59 @@ export const Container = styled(Center)`
   }
 `;
 
+export const SecondContainer = styled(Container)`
+  padding-top: 45px;
+  background-color: ${colors.colors.neutral.lightGrayishBlue};
+  padding-bottom: 75px;
+
+  & > .container-text {
+    margin-top: 89px;
+
+    & > h1 {
+      font-size: 16px;
+    }
+
+    & > p {
+      text-align: left;
+      margin-top: 15px;
+      margin-left: -25px;
+    }
+  }
+`;
+
+export const LinkIconContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: ${colors.colors.accent.moderateCyan};
+  font-size: 12px;
+
+  border-bottom: 1px solid ${colors.colors.accent.moderateCyan};
+  margin-top: 30px;
+`;
+
+export const Icon = styled.img.attrs((props) => ({
+  src: props.src,
+  alt: props.alt,
+}))`
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+`;
+
 export const Illustration = styled.img.attrs((props) => ({
   src: props.src,
   alt: props.alt,
 }))`
-  width: 305px;
+  width: 310px;
+`;
+
+export const BackgroundCurve = styled.img.attrs((props) => ({
+  src: props.src,
+  alt: props.alt,
+}))`
+  width: 100%;
+  height: 50px;
+  margin-top: 90px;
 `;
