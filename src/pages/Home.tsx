@@ -2,10 +2,27 @@ import illust1 from "../assets/illustration-1.svg";
 import illust2 from "../assets/illustration-2.svg";
 import bgCurveMobile from "../assets/bg-curve-desktop.svg";
 import iconArrow from "../assets/icon-arrow.svg";
+import LogoImg from "../assets/logo.svg";
+import PhoneIcon from "../assets/icon-phone.svg";
+import EmailIcon from "../assets/icon-email.svg";
+import FacebookIcon from "../assets/icon-facebook.svg";
+import TwitterIcon from "../assets/icon-twitter.svg";
+import InstagramIcon from "../assets/icon-instagram.svg";
 
 import Testimonial from "../components/Testimonial";
 
-import { Illustration, Center, Container, BackgroundCurve, SecondContainer, LinkIconContainer, Icon } from "./styles";
+import {
+  Illustration,
+  Center,
+  Container,
+  BackgroundCurve,
+  SecondContainer,
+  LinkIconContainer,
+  Icon,
+  AccessContainer,
+  Footer,
+  Logo,
+} from "./styles";
 
 const Home = () => {
   return (
@@ -46,6 +63,73 @@ const Home = () => {
 
         <Testimonial />
       </SecondContainer>
+
+      <AccessContainer>
+        <div className="container-text">
+          <h1>Get early access today</h1>
+          <p>
+            It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+            questions, our support team would be happy to help you.
+          </p>
+          <div className="container-email">
+            <input type="text" placeholder="email@example.com"></input>
+            <button>Get Started For Free</button>
+          </div>
+        </div>
+      </AccessContainer>
+
+      <Footer>
+        <Logo src={LogoImg}></Logo>
+        <div className="contact-info">
+          <div className="icon-container">
+            <Icon src={PhoneIcon}></Icon>
+            <p>Phone: +1-543-123-4567</p>
+          </div>
+          <div className="icon-container">
+            <Icon src={EmailIcon}></Icon>
+            <p>example@fylo.com</p>
+          </div>
+        </div>
+
+        <div className="about-us">
+          <a href="#" className="footer-link">
+            About Us
+          </a>
+          <a href="#" className="footer-link">
+            Jobs
+          </a>
+          <a href="#" className="footer-link">
+            Press
+          </a>
+          <a href="#" className="footer-link">
+            Blog
+          </a>
+        </div>
+
+        <div className="extra-info">
+          <a href="#" className="footer-link">
+            Contact Us
+          </a>
+          <a href="#" className="footer-link">
+            Terms
+          </a>
+          <a href="#" className="footer-link">
+            Privacy
+          </a>
+        </div>
+
+        <div className="links">
+          <a href="">
+            <Icon src={FacebookIcon} />
+          </a>
+          <a href="">
+            <Icon src={TwitterIcon} />
+          </a>
+          <a href="">
+            <Icon src={InstagramIcon} />
+          </a>
+        </div>
+      </Footer>
     </Center>
   );
 };

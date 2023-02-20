@@ -16,6 +16,10 @@ export const Nav = styled.nav`
 
     & > li {
       font-size: 12px;
+
+      & > a {
+        text-decoration: none;
+      }
     }
 
     & > li:not(:last-child) {

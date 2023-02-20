@@ -8,9 +8,15 @@ const Header = () => {
       <Logo src={LogoImg} alt="Fylo logo"></Logo>
       <Nav>
         <ul>
-          <li>Features</li>
-          <li>Team</li>
-          <li>Sign In</li>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Sign In</a>
+          </li>
         </ul>
       </Nav>
     </HeaderTag>

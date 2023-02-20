@@ -73,10 +73,43 @@ export const Container = styled(Center)`
   }
 `;
 
+export const AccessContainer = styled(Container)`
+  color: white;
+  background-color: ${colors.colors.primary.dessaturatedBlue};
+  padding-top: 14px;
+  padding-bottom: 70px;
+
+  & > .container-text {
+    & > h1 {
+      letter-spacing: 1px;
+      font-size: 17px;
+    }
+
+    & > p {
+      margin-top: 10px;
+    }
+
+    & > .container-email {
+      width: 75%;
+      margin-top: 22px;
+
+      & > input {
+        height: 35px;
+      }
+
+      & > button {
+        margin-top: 5px;
+        height: 35px;
+      }
+    }
+  }
+`;
+
 export const SecondContainer = styled(Container)`
   padding-top: 45px;
   background-color: ${colors.colors.neutral.lightGrayishBlue};
   padding-bottom: 75px;
+  width: 100%;
 
   & > .container-text {
     margin-top: 89px;
@@ -89,6 +122,77 @@ export const SecondContainer = styled(Container)`
       text-align: left;
       margin-top: 15px;
       margin-left: -25px;
+    }
+  }
+`;
+
+export const Footer = styled.footer`
+  background-color: ${colors.colors.primary.darkBlue};
+  color: white;
+
+  width: 100%;
+  padding-top: 65px;
+  padding-left: 40px;
+
+  & a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  & .footer-link:not(:first-child) {
+    margin-top: 19px;
+  }
+
+  & > .contact-info {
+    margin-top: 40px;
+  }
+
+  & .icon-container {
+    display: flex;
+    margin-left: -10px;
+
+    & > img {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  & .icon-container:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  & > .about-us {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  & > .extra-info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & > .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 48px;
+    padding-bottom: 50px;
+    width: 85%;
+
+    & img {
+      filter: invert();
+
+      border: 1px solid black;
+      border-radius: 50%;
+
+      padding: 5px;
+      width: 30px;
+      height: 30px;
     }
   }
 `;
@@ -128,4 +232,11 @@ export const BackgroundCurve = styled.img.attrs((props) => ({
   width: 100%;
   height: 50px;
   margin-top: 90px;
+`;
+
+export const Logo = styled.img.attrs((props) => ({
+  src: props.src,
+  alt: props.alt,
+}))`
+  width: 170px;
 `;
