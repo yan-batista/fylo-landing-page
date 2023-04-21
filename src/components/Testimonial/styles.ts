@@ -17,7 +17,7 @@ export const Container = styled.div`
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 
   & > p {
-    color: ${colors.colors.primary.darkBlue};
+    color: ${colors.primary.darkBlue};
     font-size: 12px;
     margin-top: 5px;
   }
@@ -37,7 +37,7 @@ export const Container = styled.div`
       margin-left: 10px;
 
       & > p {
-        color: ${colors.colors.primary.darkBlue};
+        color: ${colors.primary.darkBlue};
         font-size: 12px;
       }
 

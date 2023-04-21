@@ -28,7 +28,7 @@ export const Nav = styled.nav`
 
       & > a {
         text-decoration: none;
-        color: ${colors.colors.primary.darkBlue};
+        color: ${colors.primary.darkBlue};
       }
     }
 

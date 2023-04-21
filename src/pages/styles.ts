@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import colors from "../styles/colors";
 import { devices } from "../styles/devices";
@@ -11,17 +12,10 @@ export const Center = styled.div<Props>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @media ${devices.desktop} {
-    & > .firstContainer {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-  }
 `;
 
 export const Container = styled(Center)`
-  margin-top: ${(props) => props.mt};
+  margin-top: ${(props) => (props.mt ? props.mt : "0px")};
 
   & > .container-text {
     margin-top: 35px;
@@ -37,7 +31,7 @@ export const Container = styled(Center)`
     & > h1 {
       font-size: 25px;
       letter-spacing: 0.3px;
-      font-weight: 400px;
+      font-weight: 400;
     }
 
     & > p {
@@ -57,7 +51,6 @@ export const Container = styled(Center)`
 
       & > input {
         border-radius: 4px;
-        width: 100%;
         height: 42px;
         border: 1px solid black;
         text-indent: 20px;
@@ -66,16 +59,69 @@ export const Container = styled(Center)`
       & > button {
         border-radius: 4px;
         margin-top: 15px;
-        width: 100%;
         height: 42px;
 
         font-weight: 700;
         font-size: 14px;
 
-        background-color: ${colors.colors.accent.brightBlue};
+        background-color: ${colors.accent.brightBlue};
 
         border: none;
         color: white;
+
+        cursor: pointer;
+      }
+
+      & > button:hover {
+        filter: brightness(120%);
+      }
+    }
+  }
+
+  @media ${devices.desktop} {
+    &&.firstContainer {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-left: 3px;
+      margin-top: 0;
+    }
+
+    & > .container-text {
+      text-align: start;
+      align-items: flex-start;
+      width: 40%;
+
+      & > h1 {
+        font-size: 40px;
+        max-width: 600px;
+        line-height: 60px;
+      }
+
+      & > p {
+        font-size: 18px;
+        line-height: 25px;
+
+        margin-top: 16px;
+        width: 600px;
+      }
+
+      & > .container-email {
+        flex-direction: row;
+        align-items: center;
+
+        padding-left: 0;
+        margin-top: 20px;
+
+        & > input {
+          width: 74%;
+          text-indent: 20px;
+        }
+
+        & > button {
+          margin-top: 0;
+          margin-left: 15px;
+          width: 45%;
+        }
       }
     }
   }
@@ -83,7 +129,7 @@ export const Container = styled(Center)`
 
 export const AccessContainer = styled(Container)`
   color: white;
-  background-color: ${colors.colors.primary.dessaturatedBlue};
+  background-color: ${colors.primary.desaturatedBlue};
   padding-top: 14px;
   padding-bottom: 70px;
 
@@ -115,7 +161,7 @@ export const AccessContainer = styled(Container)`
 
 export const SecondContainer = styled(Container)`
   padding-top: 45px;
-  background-color: ${colors.colors.neutral.lightGrayishBlue};
+  background-color: ${colors.neutral.lightGrayishBlue};
   padding-bottom: 75px;
   width: 100%;
 
@@ -135,7 +181,7 @@ export const SecondContainer = styled(Container)`
 `;
 
 export const Footer = styled.footer`
-  background-color: ${colors.colors.primary.darkBlue};
+  background-color: ${colors.primary.darkBlue};
   color: white;
 
   width: 100%;
@@ -210,10 +256,10 @@ export const LinkIconContainer = styled.div`
   flex-direction: row;
   align-items: center;
 
-  color: ${colors.colors.accent.moderateCyan};
+  color: ${colors.accent.moderateCyan};
   font-size: 12px;
 
-  border-bottom: 1px solid ${colors.colors.accent.moderateCyan};
+  border-bottom: 1px solid ${colors.accent.moderateCyan};
   margin-top: 30px;
 `;
 
@@ -231,6 +277,11 @@ export const Illustration = styled.img.attrs((props) => ({
   alt: props.alt,
 }))`
   width: 310px;
+  @media ${devices.desktop} {
+    width: 45%;
+    margin-left: 60px;
+    margin-top: 65px;
+  }
 `;
 
 export const BackgroundCurve = styled.img.attrs((props) => ({
