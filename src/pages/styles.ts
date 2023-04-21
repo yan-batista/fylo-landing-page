@@ -178,6 +178,11 @@ export const SecondContainer = styled(Container)`
       margin-left: -25px;
     }
   }
+
+  @media ${devices.desktop} {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 `;
 
 export const Footer = styled.footer`

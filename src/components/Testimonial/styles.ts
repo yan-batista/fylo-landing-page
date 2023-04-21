@@ -7,9 +7,12 @@ export const Container = styled.div`
 
   background-color: white;
 
-  width: 75%;
-  padding: 20px 25px;
+  width: 80%;
+  padding: 20px 20px;
   margin-top: 35px;
+
+  line-height: 18px;
+  text-align: start;
 
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);

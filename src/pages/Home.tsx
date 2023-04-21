@@ -45,6 +45,7 @@ const Home = () => {
       <BackgroundCurve src={bgCurveMobile} />
       <SecondContainer>
         <Illustration src={illust2} />
+
         <div className="container-text">
           <h1 className="ff-openSans">Stay productive, wherever you are</h1>
           <p className="ff-openSans">
@@ -59,9 +60,8 @@ const Home = () => {
             <a className="ff-openSans">See how Fylo works</a>
             <Icon src={iconArrow} alt="arrow icon pointing to the right" />
           </LinkIconContainer>
+          <Testimonial />
         </div>
-
-        <Testimonial />
       </SecondContainer>
 
       <AccessContainer>
