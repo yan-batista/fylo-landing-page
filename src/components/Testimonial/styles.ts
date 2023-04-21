@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
+import { devices } from "../../styles/devices";
 
 export const Container = styled.div`
   display: flex;
@@ -47,6 +48,15 @@ export const Container = styled.div`
       & > .name {
         font-weight: bold;
       }
+    }
+  }
+
+  @media ${devices.desktop} {
+    width: 50%;
+    height: 200px;
+
+    & > p {
+      font-size: 16px;
     }
   }
 `;

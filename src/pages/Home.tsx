@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <Center className="center">
       <Container mt={"73px"} className="firstContainer">
-        <Illustration src={illust1} />
+        <Illustration src={illust1} smWidth={"310px"} lgWidth={"45%"} />
         <div className="container-text">
           <h1 className="ff-openSans">All your files in one secure location, accessible anywhere.</h1>
           <p className="ff-openSans">
@@ -44,7 +44,7 @@ const Home = () => {
 
       <BackgroundCurve src={bgCurveMobile} />
       <SecondContainer>
-        <Illustration src={illust2} />
+        <Illustration src={illust2} smWidth={"310px"} lgWidth={"35%"} />
 
         <div className="container-text">
           <h1 className="ff-openSans">Stay productive, wherever you are</h1>

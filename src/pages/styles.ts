@@ -7,6 +7,11 @@ type Props = {
   mt?: string;
 };
 
+type IllustrationProps = {
+  smWidth?: string;
+  lgWidth?: string;
+};
+
 export const Center = styled.div<Props>`
   display: flex;
   flex-direction: column;
@@ -182,6 +187,27 @@ export const SecondContainer = styled(Container)`
   @media ${devices.desktop} {
     display: flex;
     flex-direction: row-reverse;
+    padding-top: 30px;
+
+    & > .container-text {
+      width: 50%;
+
+      & > h1 {
+        font-size: 42px;
+        font-weight: 700;
+        max-width: 700px;
+        margin-bottom: 15px;
+      }
+
+      & > p {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+
+      & a {
+        font-size: 16px;
+      }
+    }
   }
 `;
 
@@ -280,10 +306,11 @@ export const Icon = styled.img.attrs((props) => ({
 export const Illustration = styled.img.attrs((props) => ({
   src: props.src,
   alt: props.alt,
-}))`
-  width: 310px;
+}))<IllustrationProps>`
+  width: ${(props) => props.smWidth};
+
   @media ${devices.desktop} {
-    width: 45%;
+    width: ${(props) => props.lgWidth};
     margin-left: 60px;
     margin-top: 65px;
   }
@@ -296,6 +323,10 @@ export const BackgroundCurve = styled.img.attrs((props) => ({
   width: 100%;
   height: 50px;
   margin-top: 90px;
+
+  @media ${devices.desktop} {
+    margin-top: 170px;
+  }
 `;
 
 export const Logo = styled.img.attrs((props) => ({
