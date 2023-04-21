@@ -27,7 +27,7 @@ import {
 const Home = () => {
   return (
     <Center className="center">
-      <Container mt={"73px"}>
+      <Container mt={"73px"} className="firstContainer">
         <Illustration src={illust1} />
         <div className="container-text">
           <h1 className="ff-openSans">All your files in one secure location, accessible anywhere.</h1>

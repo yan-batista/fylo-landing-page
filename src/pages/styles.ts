@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../styles/colors";
+import { devices } from "../styles/devices";
 
 type Props = {
   mt?: string;
@@ -10,6 +11,13 @@ export const Center = styled.div<Props>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media ${devices.desktop} {
+    & > .firstContainer {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
 `;
 
 export const Container = styled(Center)`
