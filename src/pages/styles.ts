@@ -137,14 +137,26 @@ export const AccessContainer = styled(Container)`
   background-color: ${colors.primary.desaturatedBlue};
   padding-top: 14px;
   padding-bottom: 70px;
+  width: 100%;
 
   & > .container-text {
-    & > h1 {
+    & > .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & > .text-container > h1 {
       letter-spacing: 1px;
       font-size: 17px;
     }
 
-    & > p {
+    & > .text-container > p {
+      max-width: 90%;
+      font-size: 16px;
+      text-align: center;
+      line-height: 25px;
       margin-top: 10px;
     }
 
@@ -159,6 +171,58 @@ export const AccessContainer = styled(Container)`
       & > button {
         margin-top: 5px;
         height: 35px;
+      }
+    }
+  }
+
+  @media ${devices.desktop} {
+    padding-bottom: 80px;
+
+    & > .container-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-top: 90px;
+      width: 90%;
+
+      & > .text-container {
+        align-items: start;
+        max-width: 43%;
+        padding-left: 6px;
+      }
+
+      & > .text-container > h1 {
+        font-size: 35px;
+        text-align: start;
+        letter-spacing: 0;
+      }
+
+      & > .text-container > p {
+        font-size: 16px;
+        text-align: start;
+        margin-top: 25px;
+      }
+
+      & > .container-email {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5px;
+        margin-left: 210px;
+
+        & > input {
+          height: 50px;
+          width: 90%;
+        }
+
+        & > button {
+          margin-top: 15px;
+          margin-left: 0;
+          height: 50px;
+          max-width: 200px;
+        }
       }
     }
   }
@@ -188,6 +252,7 @@ export const SecondContainer = styled(Container)`
     display: flex;
     flex-direction: row-reverse;
     padding-top: 30px;
+    padding-bottom: 105px;
 
     & > .container-text {
       width: 50%;
@@ -231,6 +296,10 @@ export const Footer = styled.footer`
 
   & > .contact-info {
     margin-top: 40px;
+
+    & > img {
+      filter: brightness(0%) invert(100%);
+    }
   }
 
   & .icon-container {

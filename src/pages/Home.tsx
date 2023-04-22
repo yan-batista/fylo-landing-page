@@ -66,11 +66,13 @@ const Home = () => {
 
       <AccessContainer>
         <div className="container-text">
-          <h1>Get early access today</h1>
-          <p>
-            It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
-            questions, our support team would be happy to help you.
-          </p>
+          <div className="text-container">
+            <h1>Get early access today</h1>
+            <p>
+              It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+              questions, our support team would be happy to help you.
+            </p>
+          </div>
           <div className="container-email">
             <input type="text" placeholder="email@example.com"></input>
             <button>Get Started For Free</button>
@@ -79,8 +81,8 @@ const Home = () => {
       </AccessContainer>
 
       <Footer>
-        <Logo src={LogoImg}></Logo>
         <div className="contact-info">
+          <Logo src={LogoImg}></Logo>
           <div className="icon-container">
             <Icon src={PhoneIcon}></Icon>
             <p>Phone: +1-543-123-4567</p>
