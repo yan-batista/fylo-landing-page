@@ -12,7 +12,7 @@ const Testimonial = () => {
         well-oiled collaboration machine.
       </p>
       <div className="person-container">
-        <Avatar src={kyleAvatar} />
+        <Avatar src={kyleAvatar} alt="Picture of Kyle Burton, founder & CEO of Huddle" />
         <div className="person-name">
           <p className="ff-openSans name">Kyle Burton</p>
           <p className="ff-openSans">Founder & CEO, Huddle</p>

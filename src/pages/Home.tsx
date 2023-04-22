@@ -28,7 +28,12 @@ const Home = () => {
   return (
     <Center className="center">
       <Container mt={"73px"} className="firstContainer">
-        <Illustration src={illust1} smWidth={"310px"} lgWidth={"45%"} />
+        <Illustration
+          src={illust1}
+          smWidth={"310px"}
+          lgWidth={"45%"}
+          alt="illustration for the background of two people putting files in a folder"
+        />
         <div className="container-text">
           <h1 className="ff-openSans">All your files in one secure location, accessible anywhere.</h1>
           <p className="ff-openSans">
@@ -42,9 +47,14 @@ const Home = () => {
         </div>
       </Container>
 
-      <BackgroundCurve src={bgCurveMobile} />
+      <BackgroundCurve src={bgCurveMobile} alt="background image curve" />
       <SecondContainer>
-        <Illustration src={illust2} smWidth={"310px"} lgWidth={"35%"} />
+        <Illustration
+          src={illust2}
+          smWidth={"310px"}
+          lgWidth={"35%"}
+          alt="illustration for the background of 3 people having a conversation"
+        />
 
         <div className="container-text">
           <h1 className="ff-openSans">Stay productive, wherever you are</h1>
@@ -84,13 +94,13 @@ const Home = () => {
 
       <Footer>
         <div className="contact-info">
-          <Logo src={LogoImg}></Logo>
+          <Logo src={LogoImg} alt="Fylo logo"></Logo>
           <div className="icon-container">
-            <Icon src={PhoneIcon}></Icon>
+            <Icon src={PhoneIcon} alt="Phone icon"></Icon>
             <p>Phone: +1-543-123-4567</p>
           </div>
           <div className="icon-container">
-            <Icon src={EmailIcon}></Icon>
+            <Icon src={EmailIcon} alt="Email icon"></Icon>
             <p>example@fylo.com</p>
           </div>
         </div>
@@ -124,13 +134,13 @@ const Home = () => {
 
         <div className="links">
           <a href="">
-            <Icon src={FacebookIcon} />
+            <Icon src={FacebookIcon} alt="Facebook icon" />
           </a>
           <a href="">
-            <Icon src={TwitterIcon} />
+            <Icon src={TwitterIcon} alt="Twitter icon" />
           </a>
           <a href="">
-            <Icon src={InstagramIcon} />
+            <Icon src={InstagramIcon} alt="Instagram icon" />
           </a>
         </div>
       </Footer>
