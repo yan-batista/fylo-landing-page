@@ -53,7 +53,6 @@ export const Container = styled.div`
 
   @media ${devices.desktop} {
     width: 50%;
-    height: 200px;
 
     & > p {
       font-size: 16px;

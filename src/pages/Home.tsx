@@ -57,7 +57,9 @@ const Home = () => {
             attachments required!
           </p>
           <LinkIconContainer>
-            <a className="ff-openSans">See how Fylo works</a>
+            <a href="#" className="ff-openSans">
+              See how Fylo works
+            </a>
             <Icon src={iconArrow} alt="arrow icon pointing to the right" />
           </LinkIconContainer>
           <Testimonial />

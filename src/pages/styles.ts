@@ -349,6 +349,39 @@ export const Footer = styled.footer`
       height: 30px;
     }
   }
+
+  @media ${devices.desktop} {
+    display: flex;
+    flex-direction: row;
+    padding: 110px 0 80px 90px;
+
+    & > *:not(:first-child) {
+      margin-top: 80px;
+    }
+
+    & > .contact-info {
+      margin-top: 0px;
+      margin-right: 190px;
+
+      width: 240px;
+    }
+
+    & > .about-us {
+      width: 80px;
+      margin-right: 190px;
+    }
+
+    & > .extra-info {
+      margin-right: 170px;
+      width: 90px;
+    }
+
+    & > .links {
+      padding-bottom: 0;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
 `;
 
 export const LinkIconContainer = styled.div`
@@ -361,6 +394,12 @@ export const LinkIconContainer = styled.div`
 
   border-bottom: 1px solid ${colors.accent.moderateCyan};
   margin-top: 30px;
+
+  & > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: ${colors.accent.moderateCyan};
+  }
 `;
 
 export const Icon = styled.img.attrs((props) => ({

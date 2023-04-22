@@ -11,9 +11,6 @@ const GlobalStyles = createGlobalStyle`
     .ff-openSans {
         font-family: 'Open Sans', sans-serif;
     }
-
-    // font-family: 'Open Sans', sans-serif;
-    // font-family: 'Raleway', sans-serif;
 `;
 
 export default GlobalStyles;
